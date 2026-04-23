@@ -10,7 +10,7 @@ export default async function Home() {
       <ul className="space-y-2">
         {products?.map((product) => (
           <li key={product.id} className="p-4 border rounded">
-            <h2 className="font-semibold">{product.name} nobro </h2>
+            <h2 className="font-semibold">{product.name} hey </h2>
             <p className="text-gray-600">{product.description}</p>
           </li>
         ))}
