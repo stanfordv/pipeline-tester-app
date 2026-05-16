@@ -107,7 +107,7 @@ export async function POST(request: Request) {
 
     const response = await fetch(endpoint, {
       method: 'POST',
-      headers,
+      heade rs,
       body,
     })
 
