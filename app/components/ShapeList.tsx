@@ -55,15 +55,27 @@ export function ShapeList({ refreshTrigger }: ShapeListProps) {
         <ul className="space-y-2">
           {shapes.map((shape) => (
             <li key={shape.id} className="p-4 border rounded bg-white">
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="font-semibold text-gray-800">{shape.label || shape.type || `Shape #${shape.id}`}</h3>
-                  <p className="text-gray-600">
-                    {shape.src} → {shape.dest}
-                  </p>
-                  <p className="text-sm text-gray-500">{shape.op}</p>
+              <div className="grid gap-4 text-sm text-gray-700 sm:grid-cols-[2fr_1fr_1fr_1fr_1fr] items-center">
+                <div className="space-y-1">
+                  <div className="text-xs uppercase tracking-wider text-gray-500">Src</div>
+                  <div className="font-medium text-gray-900">{shape.src || '-'}</div>
                 </div>
-                <span className="text-xs text-gray-400">#{shape.id}</span>
+                <div className="space-y-1">
+                  <div className="text-xs uppercase tracking-wider text-gray-500">Op</div>
+                  <div className="font-medium text-gray-900">{shape.op || '-'}</div>
+                </div>
+                <div className="space-y-1">
+                  <div className="text-xs uppercase tracking-wider text-gray-500">Dest</div>
+                  <div className="font-medium text-gray-900">{shape.dest || '-'}</div>
+                </div>
+                <div className="space-y-1">
+                  <div className="text-xs uppercase tracking-wider text-gray-500">Label</div>
+                  <div className="font-medium text-gray-900">{shape.label || '-'}</div>
+                </div>
+                <div className="space-y-1">
+                  <div className="text-xs uppercase tracking-wider text-gray-500">Type</div>
+                  <div className="font-medium text-gray-900">{shape.type || '-'}</div>
+                </div>
               </div>
             </li>
           ))}

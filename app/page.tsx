@@ -12,7 +12,7 @@ export default function Home() {
   }
 
   return (
-    <main className="p-8">
+    <main className="mx-auto max-w-[1280px] p-8">
       <h1 className="text-2xl font-bold mb-4">Arc Forming Machine</h1>
       
       <div className="mb-8">
